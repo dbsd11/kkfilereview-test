@@ -56,6 +56,11 @@ services:
         - domainName: ${vars.service_domain}
           protocol: HTTP
           # certId: ${vars.cert_id}
+          routeConfigs:
+            - path: /*
+                serviceName: kkfileview
+                functionName: kkfileview-api
+                qualifier: LATEST
       triggers:
         - name: httpTrigger
           type: http
