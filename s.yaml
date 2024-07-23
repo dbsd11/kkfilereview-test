@@ -11,7 +11,7 @@ vars:
   cert_id: ${env(cert_id)}
 
 services:
-  kkfileview: # 业务名称/模块名称
+  kkfileviewer: # 业务名称/模块名称
     component:  fc    # 组件名称 https://docs.serverless-devs.com/user-guide/aliyun/fc/yaml/readme/
     actions:          # 自定义执行逻辑
       pre-deploy:
@@ -23,7 +23,7 @@ services:
     props: # 组件的属性值
       region: ${vars.region}
       service: 
-        name: "kkfileview"
+        name: "kkfileviewer"
         description: 'kkfileview api server'
         vpcConfig: auto
         ossMountConfig: 
