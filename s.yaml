@@ -44,7 +44,7 @@ services:
         environmentVariables:
           FILE_PATH: /mnt/kkfileview-files
         customContainerConfig: 
-          image: "registry.cn-chengdu.aliyuncs.com/dbsnolimit/kkfilereviewer:latest"
+          image: "registry.cn-chengdu.aliyuncs.com/dbsnolimit/kkfilereview:latest"
         cpu: 0.5
         memorySize: 512 # 单位MB
         diskSize: 512 # 单位MB
