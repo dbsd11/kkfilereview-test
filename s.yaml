@@ -58,9 +58,9 @@ services:
           # certId: ${vars.cert_id}
           routeConfigs:
             - path: /*
-                serviceName: kkfileview
-                functionName: kkfileview-api
-                qualifier: LATEST
+              serviceName: kkfileview
+              functionName: kkfileview-api
+              qualifier: LATEST
       triggers:
         - name: httpTrigger
           type: http
