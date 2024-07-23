@@ -26,13 +26,13 @@ services:
         name: "kkfileview"
         description: 'kkfileview api server'
         vpcConfig: auto
-        # ossMountConfig: 
-        #   mountPoints: 
-        #     - bucketName: kkfileview-test
-        #       bucketPath: /files
-        #       endpoint: https://oss-cn-chengdu-internal.aliyuncs.com
-        #       mountDir: /mnt/kkfileview-files
-        #       readOnly: false
+        ossMountConfig: 
+          mountPoints: 
+            - bucketName: kkfileview-test
+              bucketPath: /files
+              endpoint: https://oss-cn-chengdu-internal.aliyuncs.com
+              mountDir: /mnt/kkfileview-files
+              readOnly: false
       function:
         name: "kkfileview-api"
         description: 'kkfileview api'
@@ -44,7 +44,7 @@ services:
         environmentVariables:
           FILE_PATH: /mnt/kkfileview-files
         customContainerConfig: 
-          image: "registry.cn-chengdu.aliyuncs.com/dbsnolimit/kkfilereview:latest"
+          image: "registry-vpc.cn-chengdu.aliyuncs.com/dbsnolimit/kkfilereview:latest"
         cpu: 0.5
         memorySize: 512 # 单位MB
         diskSize: 512 # 单位MB
