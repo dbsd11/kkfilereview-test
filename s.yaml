@@ -9,6 +9,7 @@ vars:
   region: "cn-chengdu" 
   service_domain: ${env(service_domain)}
   cert_id: ${env(cert_id)}
+  token_secret: ${env(token_secret)}
 
 services:
   kkfileview: # 业务名称/模块名称
@@ -43,7 +44,7 @@ services:
         caPort: 8012
         environmentVariables:
           FILE_PATH: /mnt/kkfileview-files
-          KK_TOKEN_SECRET: ahcR(QcmH+LF(Pw0
+          KK_TOKEN_SECRET: ${vars.token_secret}
         customContainerConfig: 
           image: "registry-vpc.cn-chengdu.aliyuncs.com/dbsnolimit/kkfilereview:latest"
         cpu: 0.5
