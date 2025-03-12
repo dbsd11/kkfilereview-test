@@ -43,6 +43,7 @@ services:
         caPort: 8012
         environmentVariables:
           FILE_PATH: /mnt/kkfileview-files
+          KK_TOKEN_SECRET: ahcR(QcmH+LF(Pw0
         customContainerConfig: 
           image: "registry-vpc.cn-chengdu.aliyuncs.com/dbsnolimit/kkfilereview:latest"
         cpu: 0.5
