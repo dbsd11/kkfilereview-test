@@ -47,13 +47,13 @@ services:
           KK_TOKEN_SECRET: ${vars.token_secret}
         customContainerConfig: 
           image: "registry-vpc.cn-chengdu.aliyuncs.com/dbsnolimit/kkfilereview:latest"
-        customHealthCheckConfig:
-          failureThreshold: 120
-          httpGetUrl: /
-          periodSeconds: 10
-          timeoutSeconds: 3
-          successThreshold: 1
-          initialDelaySeconds: 10
+        # customHealthCheckConfig:
+        #   failureThreshold: 120
+        #   httpGetUrl: /
+        #   periodSeconds: 10
+        #   timeoutSeconds: 3
+        #   successThreshold: 1
+        #   initialDelaySeconds: 10
         cpu: 0.5
         memorySize: 512 # 单位MB
         diskSize: 512 # 单位MB
