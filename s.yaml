@@ -35,7 +35,7 @@ services:
               mountDir: /mnt/kkfileview-files
               readOnly: false
       function:
-        name: "kkfileview-api"
+        name: "kkfileview-server-api"
         description: 'kkfileview api'
         version: 'LATEST'
         codeUri: '.'
@@ -68,7 +68,7 @@ services:
           routeConfigs:
             - path: /*
               serviceName: kkfileview
-              functionName: kkfileview-api
+              functionName: kkfileview-server-api
               qualifier: LATEST
       triggers:
         - name: httpTrigger
