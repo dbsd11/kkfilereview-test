@@ -12,7 +12,7 @@ vars:
   token_secret: ${env(token_secret)}
 
 services:
-  kkfileview: # 业务名称/模块名称
+  kkfileviewr: # 业务名称/模块名称
     component:  fc    # 组件名称 https://docs.serverless-devs.com/user-guide/aliyun/fc/yaml/readme/
     actions:          # 自定义执行逻辑
       pre-deploy:
@@ -24,8 +24,8 @@ services:
     props: # 组件的属性值
       region: ${vars.region}
       service: 
-        name: "kkfileview"
-        description: 'kkfileview api server'
+        name: "kkfileviewr"
+        description: 'kkfileviewr server'
         vpcConfig: auto
         ossMountConfig: 
           mountPoints: 
@@ -35,8 +35,8 @@ services:
               mountDir: /mnt/kkfileview-files
               readOnly: false
       function:
-        name: "kkfileview-server-api"
-        description: 'kkfileview api'
+        name: "kkfileviewr-api"
+        description: 'kkfileviewr api'
         version: 'LATEST'
         codeUri: '.'
         runtime: custom-container
