@@ -61,15 +61,6 @@ services:
         logConfig:
           project: 'serverless-log'
           logstore: 'kkfileview'
-      customDomains:
-        - domainName: ${vars.service_domain}
-          protocol: HTTP
-          # certId: ${vars.cert_id}
-          routeConfigs:
-            - path: /*
-              serviceName: kkfileview
-              functionName: kkfileview-server-api
-              qualifier: LATEST
       triggers:
         - name: httpTrigger
           type: http
@@ -82,3 +73,13 @@ services:
               - DELETE
               - HEAD
               - OPTIONS
+      customDomains:
+        - domainName: ${vars.service_domain}
+          protocol: HTTP
+          # certId: ${vars.cert_id}
+          routeConfigs:
+            - path: /*
+              serviceName: kkfileviewr
+              functionName: kkfileviewr-api
+              qualifier: LATEST
+      
